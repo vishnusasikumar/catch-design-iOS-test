@@ -6,7 +6,7 @@ A simple test for iOS Developers
 
 1. Fork or clone this repo
 2. Create an iOS project
-3. Use the design located in the design folder
+3. Use the design located here: https://www.figma.com/file/Q8IUvJLAxPfR2FsomFhQSV/Catch-Design-–-iOS-Test?node-id=0%3A1
 4. Make the app load the json file remotely from this repo (i.e. `https://raw.githubusercontent.com/catchnz/ios-test/master/data/data.json`) as per the design
 5. Display the data as per the design
 6. Email tech-tests@catchdesign.co.nz with:
@@ -20,5 +20,5 @@ A simple test for iOS Developers
 
 ### Bonus Points
 
-* Consume dependencies with tools like cocoapods
-* Unit tests
+* Consume dependencies with tools like cocoapods or swift package manager
+* Tests
