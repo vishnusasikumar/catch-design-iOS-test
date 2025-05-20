@@ -32,6 +32,6 @@ struct ErrorView: View {
 }
 
 #Preview {
-    let viewModel = ListViewModel(getItemsUseCase: GetListsUseCase(repo: ListRepository(service: MockService())))
+    let viewModel = ListViewModel(getItemsUseCase: GetListsUseCase(repo: ListRepository(service: NetworkService())))
     ErrorView(listViewModel: viewModel)
 }

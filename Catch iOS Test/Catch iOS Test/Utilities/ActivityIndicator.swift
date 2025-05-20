@@ -10,19 +10,18 @@ import SwiftUI
 struct ActivityIndicator: View {
     
     @State private var isAnimating: Bool = false
+    var colors: [Color] = [Color.accentColor, Color.white]
     
     var body: some View {
         GeometryReader { (geometry: GeometryProxy) in
             ForEach(0..<5) { index in
-                Group {
-                    Circle()
-                        .frame(width: geometry.size.width / 5, height: geometry.size.height / 5)
-                        .scaleEffect(calcScale(index: index))
-                        .offset(y: calcYOffset(geometry))
-                }.frame(width: geometry.size.width, height: geometry.size.height)
+                Circle()
+                    .trim(from: 0.75,to: 1.0)
+                    .stroke(lineWidth: 16)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .rotationEffect(!self.isAnimating ? .degrees(0) : .degrees(360))
                     .animation(Animation
-                        .timingCurve(0.5, 0.15 + Double(index) / 5, 0.25, 1, duration: 1.5)
+                        .linear(duration: 1)
                         .repeatForever(autoreverses: false), value: UUID())
             }
         }
@@ -43,6 +42,6 @@ struct ActivityIndicator: View {
 
 #Preview {
     ActivityIndicator()
-        .frame(width: 50, height: 50)
+        .frame(width: 60, height: 60)
         .foregroundColor(.accent)
 }

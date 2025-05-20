@@ -21,8 +21,8 @@ struct ListRepository: ListRepositoryProtocol {
     
     func  getData() async throws -> [Item] {
         do {
-            let raceResult: Result<[Item], APIError> = try await service.request()
-            switch raceResult {
+            let result: Result<[Item], APIError> = try await service.request()
+            switch result {
             case .success(let items):
                 return items
             case .failure(let error):

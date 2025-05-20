@@ -31,9 +31,10 @@ class ListViewModel: ObservableObject {
     }
     
     @MainActor
-    func getNextItems() async {state = .loading
+    func getNextItems() async {
+        state = .loading
         Task {
-            let array = await getItemsUseCase.getRaces()
+            let array = await getItemsUseCase.getListItems()
             if array.count <= 0 {
                 self.state = .failed
             } else {

@@ -7,6 +7,39 @@
 
 import Foundation
 
+public enum APIError: Error {
+    case error_204
+    case error_400
+    case error_401
+    case error_404
+    case error_500
+    case invalidUrl
+    case errorDecode
+    case failed(error: Error)
+    case failedRequest(error: Error)
+    case requestTimedOut
+    case unknownError
+}
+
+public enum NetworkStatus: Int {
+    // Undefined error
+    case undefined              = 0
+    // 2xx Success
+    case success                = 200
+    case noContent              = 204
+    // 4xx Client errors
+    case badRequest             = 400
+    case unauthorized           = 401
+    case forbidden              = 403
+    case notFound               = 404
+    case methodNotAllowed       = 405
+    //5xx Server errors
+    case internalServerError    = 500
+    case notImplemented         = 501
+    case badGateway             = 502
+    case serviceUnavailable     = 503
+}
+
 public protocol NetworkProtocol {
     func request<T:Decodable>() async throws -> Result<T, APIError>
     func cancelAllTasks()

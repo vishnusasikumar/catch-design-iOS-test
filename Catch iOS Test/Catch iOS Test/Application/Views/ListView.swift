@@ -17,7 +17,7 @@ struct ListView: View {
             case .refresh, .loading:
                 ActivityIndicator()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.accentColor)
             case .failed:
                 ErrorView(listViewModel: viewModel)
             case .idle, .loaded:

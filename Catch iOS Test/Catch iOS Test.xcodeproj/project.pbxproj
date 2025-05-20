@@ -35,12 +35,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8435145F2DDC478B000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS Test" target */ = {
+		843514E42DDC7BBD000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS Test" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				MockService.swift,
+				CatchMockResponse.json,
 			);
 			target = 8435139F2DDC1802000C3413 /* Catch iOS Test */;
+		};
+		843514E52DDC7BBD000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS TestUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CatchMockResponse.json,
+			);
+			target = 843513BB2DDC1806000C3413 /* Catch iOS TestUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -53,7 +60,8 @@
 		843513B52DDC1806000C3413 /* Catch iOS TestTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				8435145F2DDC478B000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS Test" target */,
+				843514E42DDC7BBD000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS Test" target */,
+				843514E52DDC7BBD000C3413 /* Exceptions for "Catch iOS TestTests" folder in "Catch iOS TestUITests" target */,
 			);
 			path = "Catch iOS TestTests";
 			sourceTree = "<group>";
